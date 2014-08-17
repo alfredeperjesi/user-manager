@@ -10,5 +10,8 @@ public class UserManagerRouteBuilder extends SpringRouteBuilder {
     public void configure() throws Exception {
         from("jetty:http://127.0.0.1:8091?matchOnUriPrefix=true")
                 .to("cxfbean:userManagerRestService?providers=jacksonJsonProvider,clientErrorExceptionMapper");
+        from("jetty:http://127.0.0.1:8092/api?matchOnUriPrefix=true")
+                .to("cxfbean:apiListingResourceJson?providers=jacksonJsonProvider,resourceListingProvider,apiDeclarationProvider");
+
     }
 }

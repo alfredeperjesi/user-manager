@@ -1,18 +1,30 @@
 package org.alfredeperjesi.usermanager.api;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
+@ApiModel(value = "Create user resource", description = "Resource which used for creation only")
 public class CreateUserResource {
+    @ApiModelProperty(value = "Type", required = true)
     private UserTypeResource type;
+    @ApiModelProperty(value = "First name", required = true)
     private String firstName;
+    @ApiModelProperty(value = "Last name", required = true)
     private String lastName;
+    @ApiModelProperty(value = "Title", required = true)
     private String title;
+    @ApiModelProperty(value = "Date of birth", required = true, notes = "Cannot be in the future.")
     private Date dateOfBirth;
+    @ApiModelProperty(value = "Email address", required = true, notes = "Must be valid.")
     private String emailAddress;
+    @ApiModelProperty(value = "Password", required = true, notes = "At least 5 length")
     private String password;
+    @ApiModelProperty(value = "Home address. Required only for subscribers")
     private String homeAddress;
+    @ApiModelProperty(value = "Billing address. Required only for subscribers")
     private String billingAddress;
 
     @JsonCreator
