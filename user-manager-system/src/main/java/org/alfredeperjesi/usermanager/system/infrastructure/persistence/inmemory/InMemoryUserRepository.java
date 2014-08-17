@@ -37,7 +37,7 @@ public class InMemoryUserRepository implements UserRepository {
     @Override
     public Optional<User> find(EmailAddress emailAddress) {
         for (User user : users.values()) {
-            if(user.getEmailAddress().equals(emailAddress)) {
+            if (user.getEmailAddress().equals(emailAddress)) {
                 return Optional.of(user);
             }
         }

@@ -21,7 +21,7 @@ public class EmailAddressTest {
 
         new EmailAddress(null);
     }
-    
+
     @Test
     public void emailAddressThrowsExceptionWhenValueIsNotAValidEmailAddress() {
         expectedException.expect(IllegalArgumentException.class);

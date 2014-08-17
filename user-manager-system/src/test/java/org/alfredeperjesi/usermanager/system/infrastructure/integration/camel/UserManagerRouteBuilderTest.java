@@ -1,7 +1,6 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.integration.camel;
 
 import com.google.common.collect.ImmutableMap;
-import org.alfredeperjesi.usermanager.system.Fixtures;
 import org.alfredeperjesi.usermanager.system.config.RootApplicationConfig;
 import org.apache.camel.EndpointInject;
 import org.apache.camel.Produce;
@@ -14,7 +13,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import static org.alfredeperjesi.usermanager.system.Fixtures.ID;
@@ -36,7 +34,7 @@ public class UserManagerRouteBuilderTest {
             "    \"emailAddress\":\"email@email.com\",\n" +
             "    \"password\":\"password\"\n" +
             "}";
-    private static final Map<String, Object> headers = ImmutableMap.of("serviceUserId", (Object)ID);
+    private static final Map<String, Object> headers = ImmutableMap.of("serviceUserId", (Object) ID);
     private static final int EXPECTED_COUNT = 1;
     private static final String MOCK_ENDPOINT_URI = "mock:http:localhost:8091/UserManager/users";
 

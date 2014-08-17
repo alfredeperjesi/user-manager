@@ -29,7 +29,7 @@ public class UserManagerService {
         Optional<User> serviceUser = findServiceUser(serviceUserId);
         if (authorisationHandler.isCreateAllowed(user, serviceUser)) {
             Optional<User> storedUser = userRepository.find(user.getEmailAddress());
-            if( storedUser.isPresent()) {
+            if (storedUser.isPresent()) {
                 throw new UserAlreadyExistsException(storedUser.get());
             }
             userRepository.persist(user);
@@ -77,7 +77,7 @@ public class UserManagerService {
     }
 
     private Optional<User> findServiceUser(Optional<UserId> serviceUserId) {
-        return serviceUserId.isPresent()?findServiceUser(serviceUserId.get()):Optional.<User>absent();
+        return serviceUserId.isPresent() ? findServiceUser(serviceUserId.get()) : Optional.<User>absent();
     }
 
     private Optional<User> findServiceUser(UserId serviceUserId) {

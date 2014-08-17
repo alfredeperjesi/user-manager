@@ -16,10 +16,7 @@ import org.springframework.stereotype.Component;
 
 import javax.ws.rs.core.Response;
 
-import static javax.ws.rs.core.Response.Status;
-import static javax.ws.rs.core.Response.Status.CREATED;
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
-import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
+import static javax.ws.rs.core.Response.Status.*;
 
 @Component
 public class UserManagerRestService implements UserManagerApi {

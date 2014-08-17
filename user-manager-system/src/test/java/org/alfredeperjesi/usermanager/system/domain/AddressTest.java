@@ -1,6 +1,5 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -21,11 +20,11 @@ public class AddressTest {
 
         new Address(null);
     }
-    
+
     @Test
     public void addressConstructsProperlyWhenValueIsNotNull() {
         Address address = new Address(ADDRESS_VALUE);
-        
+
         assertThat(address.getValue(), equalTo(ADDRESS_VALUE));
     }
 }

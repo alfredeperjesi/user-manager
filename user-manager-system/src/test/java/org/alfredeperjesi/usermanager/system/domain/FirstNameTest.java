@@ -20,11 +20,11 @@ public class FirstNameTest {
 
         new FirstName(null);
     }
-    
+
     @Test
     public void firstNameConstructsProperlyWhenValueIsNotNull() {
         FirstName firstName = new FirstName(FIRST_NAME);
-        
+
         assertThat(firstName.getValue(), equalTo(FIRST_NAME));
     }
 }

@@ -3,7 +3,6 @@ package org.alfredeperjesi.usermanager.system.domain;
 import com.google.common.base.Optional;
 import org.springframework.util.Assert;
 
-import javax.management.remote.rmi._RMIConnection_Stub;
 import java.util.Date;
 
 public class User {
@@ -165,14 +164,14 @@ public class User {
         }
 
         public Builder withHomeAddress(String homeAddress) {
-            if(homeAddress != null) {
+            if (homeAddress != null) {
                 this.homeAddress = Optional.of(new Address(homeAddress));
             }
             return this;
         }
 
         public Builder withBillingAddress(String billingAddress) {
-            if(billingAddress != null) {
+            if (billingAddress != null) {
                 this.billingAddress = Optional.of(new Address(billingAddress));
             }
             return this;

@@ -20,11 +20,11 @@ public class TitleTest {
 
         new Title(null);
     }
-    
+
     @Test
     public void titleConstructsProperlyWhenValueIsNotNull() {
         Title title = new Title(TITLE);
-        
+
         assertThat(title.getValue(), equalTo(TITLE));
     }
 }

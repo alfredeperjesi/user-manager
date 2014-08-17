@@ -3,28 +3,23 @@ package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 import com.google.common.base.Optional;
 import org.alfredeperjesi.usermanager.api.UserManagerApi;
 import org.alfredeperjesi.usermanager.api.UserResource;
-import org.alfredeperjesi.usermanager.system.Fixtures;
 import org.alfredeperjesi.usermanager.system.application.MethodNotAllowedException;
 import org.alfredeperjesi.usermanager.system.application.UserAlreadyExistsException;
 import org.alfredeperjesi.usermanager.system.application.UserManagerService;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import javax.ws.rs.core.Response;
 
 import static org.alfredeperjesi.usermanager.system.Fixtures.*;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserManagerRestServiceTest {

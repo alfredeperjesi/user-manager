@@ -1,16 +1,12 @@
 package org.alfredeperjesi.usermanager.system.application;
 
-import org.alfredeperjesi.usermanager.system.Fixtures;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserRepository;
 import org.alfredeperjesi.usermanager.system.infrastructure.rest.UserIdGenerator;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.alfredeperjesi.usermanager.system.Fixtures.ID;

@@ -22,7 +22,7 @@ public class PasswordTest {
 
         new Password(null);
     }
-    
+
     @Test
     public void passwordThrowsExceptionWhenValueLengthIsLessThanFive() {
         expectedException.expect(IllegalArgumentException.class);

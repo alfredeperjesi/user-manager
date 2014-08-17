@@ -22,7 +22,7 @@ public class UserIdTest {
 
         new UserId(null);
     }
-    
+
     @Test
     public void userIdThrowsExceptionWhenValueIsNegative() {
         expectedException.expect(IllegalArgumentException.class);

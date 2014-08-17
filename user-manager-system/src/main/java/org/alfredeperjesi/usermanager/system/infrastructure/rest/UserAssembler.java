@@ -10,8 +10,6 @@ import org.alfredeperjesi.usermanager.system.domain.UserId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import static org.alfredeperjesi.usermanager.system.domain.User.userBuilder;
 
 @Component
@@ -71,7 +69,7 @@ public class UserAssembler {
     }
 
     public Optional<UserId> assembleOptionalUserId(Integer userId) {
-        return userId != null?Optional.of(assembleUserId(userId)):Optional.<UserId>absent();
+        return userId != null ? Optional.of(assembleUserId(userId)) : Optional.<UserId>absent();
     }
 
     public UserId assembleUserId(Integer userId) {
