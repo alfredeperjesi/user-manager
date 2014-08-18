@@ -1,15 +1,16 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-
 public class UserIdTest {
 
     private static final int NEGATIVE_ID = -1;
+
     private static final int VALID_VALUE = 1;
 
     @Rule

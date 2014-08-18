@@ -1,15 +1,16 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-
 public class PasswordTest {
 
     private static final String SHORT_PASSWORD = "pass";
+
     private static final String VALID_PASSWORD = "password";
 
     @Rule

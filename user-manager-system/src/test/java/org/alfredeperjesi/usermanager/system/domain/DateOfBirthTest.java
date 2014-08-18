@@ -1,17 +1,18 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
-import java.util.Date;
-
 import static org.alfredeperjesi.usermanager.system.Fixtures.getDate;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import java.util.Date;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
 public class DateOfBirthTest {
     private static final int FUTURE = 1;
+
     private static final int PAST = -1;
 
     @Rule

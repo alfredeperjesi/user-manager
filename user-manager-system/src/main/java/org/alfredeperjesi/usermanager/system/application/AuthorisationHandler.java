@@ -1,8 +1,9 @@
 package org.alfredeperjesi.usermanager.system.application;
 
-import com.google.common.base.Optional;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.springframework.stereotype.Component;
+
+import com.google.common.base.Optional;
 
 @Component
 public class AuthorisationHandler {

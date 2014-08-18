@@ -1,11 +1,11 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
 
 public class FirstNameTest {
     private static final String FIRST_NAME = "first";

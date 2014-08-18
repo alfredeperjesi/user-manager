@@ -1,8 +1,8 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 
-import org.springframework.stereotype.Component;
-
 import java.util.concurrent.atomic.AtomicInteger;
+
+import org.springframework.stereotype.Component;
 
 @Component
 public class InMemoryUserIdGenerator implements UserIdGenerator {

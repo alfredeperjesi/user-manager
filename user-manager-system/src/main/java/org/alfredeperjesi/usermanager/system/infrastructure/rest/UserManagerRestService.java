@@ -1,6 +1,11 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 
-import com.google.common.base.Optional;
+import static javax.ws.rs.core.Response.Status.CREATED;
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
+import static javax.ws.rs.core.Response.Status.UNAUTHORIZED;
+
+import javax.ws.rs.core.Response;
+
 import org.alfredeperjesi.usermanager.api.CreateUserResource;
 import org.alfredeperjesi.usermanager.api.UserManagerApi;
 import org.alfredeperjesi.usermanager.api.UserResource;
@@ -14,15 +19,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.ws.rs.core.Response;
-
-import static javax.ws.rs.core.Response.Status.*;
+import com.google.common.base.Optional;
 
 @Component
 public class UserManagerRestService implements UserManagerApi {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserManagerRestService.class);
 
     private final UserManagerService userManagerService;
+
     private final UserAssembler userAssembler;
 
     @Autowired
@@ -64,7 +68,7 @@ public class UserManagerRestService implements UserManagerApi {
         UserId userId = userAssembler.assembleUserId(id);
         try {
             Optional<User> user = userManagerService.get(optionalServiceUserId, userId);
-            if(user.isPresent()) {
+            if (user.isPresent()) {
                 UserResource userResource = userAssembler.deassemble(user.get());
 
                 LOGGER.info("User resource found by service user id {}, user resource id {}", serviceUserId, id);

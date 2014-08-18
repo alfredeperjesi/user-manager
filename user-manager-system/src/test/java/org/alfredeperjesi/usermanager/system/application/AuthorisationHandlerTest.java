@@ -1,20 +1,29 @@
 package org.alfredeperjesi.usermanager.system.application;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ADMINISTRATOR;
+import static org.alfredeperjesi.usermanager.system.Fixtures.SUBSCRIBER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.SUPER_USER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.user;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.alfredeperjesi.usermanager.system.Fixtures.*;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import com.google.common.base.Optional;
 
 public class AuthorisationHandlerTest {
     private static final User SUBSRIBER_USER = user(1, SUBSCRIBER);
+
     private static final User SUBSRIBER_USER_2 = user(2, SUBSCRIBER);
+
     private static final User ADMINISTRATOR_USER = user(3, ADMINISTRATOR);
+
     private static final User ADMINISTRATOR_USER_2 = user(4, ADMINISTRATOR);
+
     private static final User SUPER_USER_USER = user(5, SUPER_USER);
+
     private static final User SUPER_USER_USER_2 = user(6, SUPER_USER);
 
     private AuthorisationHandler authorisationHandler;

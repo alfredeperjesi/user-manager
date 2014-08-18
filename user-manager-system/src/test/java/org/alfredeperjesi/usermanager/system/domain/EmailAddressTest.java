@@ -1,14 +1,15 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-
 public class EmailAddressTest {
     private static final String INVALID_EMAIL = "email.com";
+
     private static final String VALID_EMAIL = "user@email.com";
 
     @Rule

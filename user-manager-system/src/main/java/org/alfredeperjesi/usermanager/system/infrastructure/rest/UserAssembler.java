@@ -1,6 +1,7 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.domain.User.userBuilder;
+
 import org.alfredeperjesi.usermanager.api.CreateUserResource;
 import org.alfredeperjesi.usermanager.api.UserResource;
 import org.alfredeperjesi.usermanager.api.UserTypeResource;
@@ -10,7 +11,7 @@ import org.alfredeperjesi.usermanager.system.domain.UserId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import static org.alfredeperjesi.usermanager.system.domain.User.userBuilder;
+import com.google.common.base.Optional;
 
 @Component
 public class UserAssembler {

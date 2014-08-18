@@ -1,6 +1,10 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.persistence.inmemory;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER_UPDATED;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import org.alfredeperjesi.usermanager.system.domain.EmailAddress;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
@@ -8,15 +12,14 @@ import org.alfredeperjesi.usermanager.system.domain.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
-import static org.alfredeperjesi.usermanager.system.Fixtures.USER_UPDATED;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import com.google.common.base.Optional;
 
 public class InMemoryUserRepositoryTest {
 
     public static final UserId ID = new UserId(1);
+
     public static final EmailAddress UNKNOWN_EMAIL_ADDRESS = new EmailAddress("email@email.com1");
+
     private UserRepository userRepository;
 
     @Before

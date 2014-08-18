@@ -1,20 +1,30 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
-import com.google.common.base.Optional;
+import java.util.Date;
+
 import org.springframework.util.Assert;
 
-import java.util.Date;
+import com.google.common.base.Optional;
 
 public class User {
     private UserId id;
+
     private UserType type;
+
     private FirstName firstName;
+
     private LastName lastName;
+
     private Title title;
+
     private DateOfBirth dateOfBirth;
+
     private EmailAddress emailAddress;
+
     private Password password;
+
     private Optional<Address> homeAddress;
+
     private Optional<Address> billingAddress;
 
     private User(UserId id, UserType type, FirstName firstName, LastName lastName, Title title, DateOfBirth dateOfBirth, EmailAddress emailAddress, Password password, Optional<Address> homeAddress, Optional<Address> billingAddress) {
@@ -113,14 +123,23 @@ public class User {
 
     public static class Builder {
         private UserId id;
+
         private UserType type;
+
         private FirstName firstName;
+
         private LastName lastName;
+
         private Title title;
+
         private DateOfBirth dateOfBirth;
+
         private EmailAddress emailAddress;
+
         private Password password;
+
         private Optional<Address> homeAddress = Optional.absent();
+
         private Optional<Address> billingAddress = Optional.absent();
 
         public Builder withId(Integer id) {

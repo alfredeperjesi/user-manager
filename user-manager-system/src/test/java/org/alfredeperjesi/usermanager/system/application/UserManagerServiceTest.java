@@ -1,6 +1,12 @@
 package org.alfredeperjesi.usermanager.system.application;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
 import org.alfredeperjesi.usermanager.system.domain.UserRepository;
@@ -12,15 +18,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.mockito.Mockito.*;
+import com.google.common.base.Optional;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserManagerServiceTest {
     private static final Optional<UserId> SERVICE_USER_ID = Optional.<UserId>of(new UserId(1));
+
     public static final Optional<User> USER_ABSENT = Optional.<User>absent();
+
     public static final Optional<User> USER_PRESENT = Optional.of(USER);
 
     @Rule

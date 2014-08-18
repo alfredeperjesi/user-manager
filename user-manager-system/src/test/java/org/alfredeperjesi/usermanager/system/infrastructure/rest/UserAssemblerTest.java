@@ -1,6 +1,20 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ADMINISTRATOR;
+import static org.alfredeperjesi.usermanager.system.Fixtures.CREATE_USER_RESOURCE;
+import static org.alfredeperjesi.usermanager.system.Fixtures.DATE_OF_BIRTH;
+import static org.alfredeperjesi.usermanager.system.Fixtures.EMAIL_ADDRESS;
+import static org.alfredeperjesi.usermanager.system.Fixtures.FIRST_NAME;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ID;
+import static org.alfredeperjesi.usermanager.system.Fixtures.LAST_NAME;
+import static org.alfredeperjesi.usermanager.system.Fixtures.PASSWORD;
+import static org.alfredeperjesi.usermanager.system.Fixtures.TITLE;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER_RESOURCE;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.when;
+
 import org.alfredeperjesi.usermanager.api.UserResource;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
@@ -10,10 +24,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.alfredeperjesi.usermanager.system.Fixtures.*;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.when;
+import com.google.common.base.Optional;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserAssemblerTest {

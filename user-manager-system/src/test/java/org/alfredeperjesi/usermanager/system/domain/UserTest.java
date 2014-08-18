@@ -1,13 +1,24 @@
 package org.alfredeperjesi.usermanager.system.domain;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
-import static org.alfredeperjesi.usermanager.system.Fixtures.*;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ADMINISTRATOR;
+import static org.alfredeperjesi.usermanager.system.Fixtures.BILLING_ADDRESS;
+import static org.alfredeperjesi.usermanager.system.Fixtures.DATE_OF_BIRTH;
+import static org.alfredeperjesi.usermanager.system.Fixtures.EMAIL_ADDRESS;
+import static org.alfredeperjesi.usermanager.system.Fixtures.FIRST_NAME;
+import static org.alfredeperjesi.usermanager.system.Fixtures.HOME_ADDRESS;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ID;
+import static org.alfredeperjesi.usermanager.system.Fixtures.LAST_NAME;
+import static org.alfredeperjesi.usermanager.system.Fixtures.PASSWORD;
+import static org.alfredeperjesi.usermanager.system.Fixtures.SUBSCRIBER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.SUPER_USER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.TITLE;
 import static org.alfredeperjesi.usermanager.system.domain.User.userBuilder;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class UserTest {
     @Rule

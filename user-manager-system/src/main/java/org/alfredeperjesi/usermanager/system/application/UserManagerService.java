@@ -1,6 +1,5 @@
 package org.alfredeperjesi.usermanager.system.application;
 
-import com.google.common.base.Optional;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
 import org.alfredeperjesi.usermanager.system.domain.UserRepository;
@@ -8,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.google.common.base.Optional;
 
 @Component
 public class UserManagerService {

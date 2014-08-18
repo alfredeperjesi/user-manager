@@ -1,14 +1,15 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.persistence.inmemory;
 
-import com.google.common.base.Optional;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.alfredeperjesi.usermanager.system.domain.EmailAddress;
 import org.alfredeperjesi.usermanager.system.domain.User;
 import org.alfredeperjesi.usermanager.system.domain.UserId;
 import org.alfredeperjesi.usermanager.system.domain.UserRepository;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import com.google.common.base.Optional;
 
 @Component
 public class InMemoryUserRepository implements UserRepository {

@@ -1,12 +1,13 @@
 package org.alfredeperjesi.usermanager.system.config;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.alfredeperjesi.usermanager.system.application.ApplicationInitializer;
 import org.apache.camel.spring.javaconfig.CamelConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 @Configuration
 @ComponentScan({"org.alfredeperjesi.usermanager.system.infrastructure", "org.alfredeperjesi.usermanager.system.application"})

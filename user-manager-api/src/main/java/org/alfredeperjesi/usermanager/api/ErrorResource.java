@@ -1,8 +1,8 @@
 package org.alfredeperjesi.usermanager.api;
 
-import com.wordnik.swagger.annotations.ApiModel;
-
 import java.io.Serializable;
+
+import com.wordnik.swagger.annotations.ApiModel;
 
 @ApiModel(value = "Error resource", description = "Resource which used for errors")
 public class ErrorResource implements Serializable {

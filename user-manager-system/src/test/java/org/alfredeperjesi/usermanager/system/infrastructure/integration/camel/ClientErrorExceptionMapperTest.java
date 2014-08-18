@@ -1,21 +1,24 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.integration.camel;
 
-import com.fasterxml.jackson.core.JsonLocation;
-import com.fasterxml.jackson.core.JsonParseException;
-import org.alfredeperjesi.usermanager.api.ErrorResource;
-import org.junit.Before;
-import org.junit.Test;
-
-import javax.ws.rs.core.Response;
-
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import javax.ws.rs.core.Response;
+
+import org.alfredeperjesi.usermanager.api.ErrorResource;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.fasterxml.jackson.core.JsonLocation;
+import com.fasterxml.jackson.core.JsonParseException;
+
 public class ClientErrorExceptionMapperTest {
     public static final String ERROR = "Error";
+
     public static final String INVALID_JSON_MESSAGE = "The json input is not appropriate!";
+
     private ClientErrorExceptionMapper clientErrorExceptionMapper;
 
     @Before

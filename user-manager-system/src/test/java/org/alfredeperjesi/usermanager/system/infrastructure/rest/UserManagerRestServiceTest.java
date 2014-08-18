@@ -1,6 +1,17 @@
 package org.alfredeperjesi.usermanager.system.infrastructure.rest;
 
-import com.google.common.base.Optional;
+import static org.alfredeperjesi.usermanager.system.Fixtures.CREATE_USER_RESOURCE;
+import static org.alfredeperjesi.usermanager.system.Fixtures.ID;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER;
+import static org.alfredeperjesi.usermanager.system.Fixtures.USER_RESOURCE;
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import javax.ws.rs.core.Response;
+
 import org.alfredeperjesi.usermanager.api.UserManagerApi;
 import org.alfredeperjesi.usermanager.api.UserResource;
 import org.alfredeperjesi.usermanager.system.application.MethodNotAllowedException;
@@ -14,17 +25,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import javax.ws.rs.core.Response;
-
-import static org.alfredeperjesi.usermanager.system.Fixtures.*;
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.*;
+import com.google.common.base.Optional;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserManagerRestServiceTest {
     public static final UserId USER_ID = new UserId(ID);
+
     public static final Optional<UserId> USER_ID_OPTIONAL = Optional.of(USER_ID);
+
     public static final MethodNotAllowedException METHOD_NOT_ALLOWED_EXCEPTION = new MethodNotAllowedException("Test");
 
     @Mock
