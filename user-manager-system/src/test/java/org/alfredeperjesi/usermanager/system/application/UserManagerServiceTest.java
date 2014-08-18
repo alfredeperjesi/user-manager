@@ -24,9 +24,9 @@ import com.google.common.base.Optional;
 public class UserManagerServiceTest {
     private static final Optional<UserId> SERVICE_USER_ID = Optional.<UserId>of(new UserId(1));
 
-    public static final Optional<User> USER_ABSENT = Optional.<User>absent();
+    private static final Optional<User> USER_ABSENT = Optional.<User>absent();
 
-    public static final Optional<User> USER_PRESENT = Optional.of(USER);
+    private static final Optional<User> USER_PRESENT = Optional.of(USER);
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();

@@ -32,7 +32,7 @@ public interface UserManagerApi {
             response = UserResource.class
     )
     @ApiResponses({
-            @ApiResponse(code = 200, message = "User has already created, the stored user resource", response = UserResource.class),
+            @ApiResponse(code = 200, message = "User has already created, the stored user resource (idempotency)", response = UserResource.class),
             @ApiResponse(code = 201, message = "User successfully created", response = UserResource.class),
             @ApiResponse(code = 400, message = "Bad request", response = ErrorResource.class),
             @ApiResponse(code = 401, message = "User not authorised", response = ErrorResource.class),

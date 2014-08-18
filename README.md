@@ -33,6 +33,7 @@ Implementation:
 
 Possible improvements
 - add OAuth2 authentication
+- improve update (update part of the resource only)
 
 Build
 1. Goto the user-manager folder

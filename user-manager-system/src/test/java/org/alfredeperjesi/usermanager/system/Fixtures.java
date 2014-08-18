@@ -106,7 +106,6 @@ public class Fixtures {
     public static Date getDate(int year) {
         Calendar calendar = GregorianCalendar.getInstance();
         calendar.add(GregorianCalendar.YEAR, year);
-
         return calendar.getTime();
     }
 

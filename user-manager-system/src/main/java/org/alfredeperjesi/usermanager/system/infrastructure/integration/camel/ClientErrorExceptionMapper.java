@@ -21,12 +21,14 @@ public class ClientErrorExceptionMapper implements ExceptionMapper<Exception> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientErrorExceptionMapper.class);
 
+    private static final String THE_JSON_INPUT_IS_NOT_APPROPRIATE = "The json input is not appropriate!";
+
     @Override
     public Response toResponse(Exception e) {
         LOGGER.error("", e);
 
         if (e instanceof JsonParseException) {
-            return status(BAD_REQUEST).entity(new ErrorResource("The json input is not appropriate!")).build();
+            return status(BAD_REQUEST).entity(new ErrorResource(THE_JSON_INPUT_IS_NOT_APPROPRIATE)).build();
         } else if (e instanceof NullPointerException || e instanceof IllegalArgumentException) {
             return status(BAD_REQUEST).entity(new ErrorResource(e.getMessage())).build();
         } else {

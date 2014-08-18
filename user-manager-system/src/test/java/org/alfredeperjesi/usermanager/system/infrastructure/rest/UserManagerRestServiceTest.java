@@ -29,11 +29,11 @@ import com.google.common.base.Optional;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserManagerRestServiceTest {
-    public static final UserId USER_ID = new UserId(ID);
+    private static final UserId USER_ID = new UserId(ID);
 
-    public static final Optional<UserId> USER_ID_OPTIONAL = Optional.of(USER_ID);
+    private static final Optional<UserId> USER_ID_OPTIONAL = Optional.of(USER_ID);
 
-    public static final MethodNotAllowedException METHOD_NOT_ALLOWED_EXCEPTION = new MethodNotAllowedException("Test");
+    private static final MethodNotAllowedException METHOD_NOT_ALLOWED_EXCEPTION = new MethodNotAllowedException("Test");
 
     @Mock
     private UserAssembler userAssembler;

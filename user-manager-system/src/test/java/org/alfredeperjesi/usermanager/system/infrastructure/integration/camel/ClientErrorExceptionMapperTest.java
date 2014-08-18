@@ -15,9 +15,9 @@ import com.fasterxml.jackson.core.JsonLocation;
 import com.fasterxml.jackson.core.JsonParseException;
 
 public class ClientErrorExceptionMapperTest {
-    public static final String ERROR = "Error";
+    private static final String ERROR = "Error";
 
-    public static final String INVALID_JSON_MESSAGE = "The json input is not appropriate!";
+    private static final String INVALID_JSON_MESSAGE = "The json input is not appropriate!";
 
     private ClientErrorExceptionMapper clientErrorExceptionMapper;
 

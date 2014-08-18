@@ -16,9 +16,9 @@ import com.google.common.base.Optional;
 
 public class InMemoryUserRepositoryTest {
 
-    public static final UserId ID = new UserId(1);
+    private static final UserId ID = new UserId(1);
 
-    public static final EmailAddress UNKNOWN_EMAIL_ADDRESS = new EmailAddress("email@email.com1");
+    private static final EmailAddress UNKNOWN_EMAIL_ADDRESS = new EmailAddress("email@email.com1");
 
     private UserRepository userRepository;
 
